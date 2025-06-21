@@ -545,16 +545,115 @@ section{
 }
 
 
-@media (max-width:450px){
-    
-    html{
-        font-size: 50%
-    }
-    .heading{
-        font-size: 3rem;
-    }
-    
-    }
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  header {
+    padding: 2rem;
+  }
+  section {
+    padding: 2rem;
+  }
+  .home .content h3 {
+    font-size: 4rem;
+  }
+  .home .content span {
+    font-size: 2.5rem;
+  }
+}
+
+/* Celulares (pantallas chicas) */
+@media (max-width: 768px) {
+  header .fa-bars {
+    display: block;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: #fff;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    display: none;
+    flex-direction: column;
+  }
+
+  #toggler:checked ~ .navbar {
+    display: flex;
+  }
+
+  header .navbar a {
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    color: #333;
+  }
+
+  .home {
+    background-position: center;
+    text-align: center;
+  }
+
+  .about .row {
+    flex-direction: column;
+  }
+
+  .icons-container {
+    flex-direction: column;
+  }
+
+  .products .box-container,
+  .review .box-container,
+  .footer .box-container,
+  .contact .row {
+    flex-direction: column;
+  }
+
+  .products .box-container .box,
+  .review .box-container .box {
+    width: 100%;
+  }
+
+  .contact .row form,
+  .contact .row .image {
+    width: 100%;
+  }
+}
+
+/* Celulares muy pequeños (tipo iPhone SE, Galaxy Mini) */
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .home .content h3 {
+    font-size: 3.5rem;
+  }
+
+  .home .content span {
+    font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+    padding: .7rem 2.5rem;
+  }
+
+  .review .box-container .box p {
+    font-size: 1.3rem;
+  }
+
+  .contact .row form .box {
+    font-size: 1.5rem;
+  }
+}
 
 
 
