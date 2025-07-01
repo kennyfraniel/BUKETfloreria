@@ -7,9 +7,12 @@
      <!--Font awesome cdn link-->
      <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lora&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+     
      <!--custom css file link-->
      <link rel="stylesheet" href="style.css"> 
 </head>
+
 <body>
 
     <!--Header section starts-->
@@ -109,114 +112,90 @@
 <!--Products section stars-->
 
 <section class="products" id="products">
-    <h1 class="heading">latest <span>products</span></h1>
+    <h1 class="heading">arreglos <span>florales</span></h1>
     <div class="box-container">
 
         <div class="box">
             <div class="image">
                 <img src="/images/img-1.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Flower pot</h3>
+                <div class="overlay-text glass">Flower Pot</div>
             </div>
         </div>
 
         <div class="box">
             <div class="image">
                 <img src="/images/img-2.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Flower pot</h3>
+                <div class="overlay-text glass">Flower Pot</div>
             </div>
         </div>
 
         <div class="box">
             <div class="image">
                 <img src="/images/img-3.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Flower pot</h3>
+                <div class="overlay-text glass">Flower Pot</div>
             </div>
         </div>
 
-        <div class="box">
+       <div class="box">
             <div class="image">
                 <img src="/images/img-4.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Flower pot</h3>
+                <div class="overlay-text glass">Flower Pot</div>
             </div>
         </div>
 
         <div class="box">
             <div class="image">
                 <img src="/images/img-5.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Flower pot</h3>
+                <div class="overlay-text glass">Flower Pot</div>
             </div>
         </div>
 
-        <div class="box">
+       <div class="box">
             <div class="image">
-                <img src="/images/img-6.png" alt="">
-            </div>
-            <div class="content">
-                <h3>Flower pot</h3>
+                <img src="/images/img-6.jpg" alt="">
+                <div class="overlay-text glass">Flower Pot</div>
             </div>
         </div>
 
         <div class="box">
             <div class="image">
                 <img src="/images/img-7.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Flower pot</h3>
+                <div class="overlay-text glass">Flower Pot</div>
             </div>
         </div>
 
         <div class="box">
             <div class="image">
                 <img src="/images/img-8.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Flower pot</h3>
+                <div class="overlay-text glass">Flower Pot</div>
             </div>
         </div>
 
         <div class="box">
             <div class="image">
                 <img src="/images/img-9.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Flower pot</h3>
+                <div class="overlay-text glass">Flower Pot</div>
             </div>
         </div>
 
         <div class="box">
             <div class="image">
-                <img src="/images/img-10.png" alt="">
-            </div>
-            <div class="content">
-                <h3>Flower pot</h3>
+                <img src="/images/img-10.jpg" alt="">
+                <div class="overlay-text glass">Flower Pot</div>
             </div>
         </div>
 
         <div class="box">
             <div class="image">
-                <img src="/images/img-11.png" alt="">
-            </div>
-            <div class="content">
-                <h3>Flower pot</h3>
+                <img src="/images/img-11.jpg" alt="">
+                <div class="overlay-text glass">Flower Pot</div>
             </div>
         </div>
 
         <div class="box">
             <div class="image">
-                <img src="/images/img-12.png" alt="">
-            </div>
-            <div class="content">
-                <h3>Flower pot</h3>
+                <img src="/images/img-12.jpg" alt="">
+                <div class="overlay-text glass">Flower Pot</div>
             </div>
         </div>
 
@@ -311,14 +290,14 @@
 
 <!--contact section starts-->
 <section class="contact" id="contact">
-    <h1 class="heading"><span>contact</span> </h1>
+    <h1 class="heading"><span>contacto!</span> </h1>
     <div class="row">
         <form action="https://formsubmit.co/francogrimoldidelgado@hotmail.com" method="POST">
-            <input type="text" class="box" placeholder="Name">
+            <input type="text" class="box" placeholder="Nombre">
             <input type="email" class="box" placeholder="Email">
-            <input type="number" class="box" placeholder="Number">
-            <textarea name="" class="box" placeholder="Message" id="" cols="30" rows="10"></textarea>
-            <input type="submit" value="send massage" class="btn">
+            <input type="number" class="box" placeholder="Numero">
+            <textarea name="" class="box" placeholder="Mensaje" id="" cols="30" rows="10"></textarea>
+            <input type="submit" value="Enviar" class="btn">
         </form>
         <div class="image">
             <img src="/images/contact-img.svg" alt="">
@@ -338,7 +317,54 @@
 
 <!--footer section ends-->
 
+<div id="image-modal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-img">
+  <span class="nav left">&#10094;</span>
+  <span class="nav right">&#10095;</span>
+</div>
 
+<script>
+  const modal = document.getElementById("image-modal");
+  const modalImg = document.getElementById("modal-img");
+  const closeBtn = document.querySelector(".modal .close");
+  const images = document.querySelectorAll(".products .box .image img");
+  const leftArrow = document.querySelector(".modal .left");
+  const rightArrow = document.querySelector(".modal .right");
+
+  let currentIndex = 0;
+
+  const showImage = (index) => {
+    modal.style.display = "block";
+    modalImg.src = images[index].src;
+    currentIndex = index;
+  };
+
+  // Cargar imagen al hacer clic
+  images.forEach((img, index) => {
+    img.addEventListener("click", () => {
+      showImage(index);
+    });
+  });
+
+  // Cerrar modal
+  closeBtn.onclick = () => modal.style.display = "none";
+  window.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  };
+
+  // Flecha izquierda
+  leftArrow.onclick = () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  };
+
+  // Flecha derecha
+  rightArrow.onclick = () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  };
+</script>
 
 
 
